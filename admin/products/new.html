@@ -6,7 +6,43 @@
     <title>New</title>
     <link rel="stylesheet" type="text/css" href="../../CSS/main.css">
 </head>
-<body>
-    
+<body class="admin-layout">
+    <header class="admin-header">
+        <h1>Admistration</h1>
+    </header>
+    <aside class="admin-aside">
+        <h2>Produkter</h2>
+    </aside>
+    <main class="admin-main">
+        <div class="new-product">
+            <h2>Ny produkt</h2>
+            <form id="newProductForm" action="#">
+                <label for="namn">Namn</label>
+                <input type="text" id="namn" placeholder="Ange namn" maxlength="50" required>
+                <label for="description">Beskrivning</label>
+                <textarea name="description" id="description" rows="4" placeholder="Ange beskrivning"></textarea>
+                <label for="picture">Bild</label>
+                <input type="file" name="picture" id="picture" accept="image/*" required>
+                <label for="sku">SKU</label>
+                <input type="text" name="sku" id="sku" pattern="[A-Z]{3}[0-9]{3}" placeholder="Ange SKU" required>
+                <label for="price">Pris</label>
+                <input type="number" name="price" id="price" min="0" required>
+                <label for="plublishingDate">Publiceringsdatum</label>
+                <input type="date" name="plublishingDate" id="plublishingDate">
+                <fieldset>
+                    <legend>Kategorier</legend>
+                    <input type="checkbox" name="t-shirts" id="t-shirts">
+                    <label for="t-shirts">T-shirts</label><br>
+                    <input type="checkbox" name="summer" id="summer">
+                    <label for="summer">Sommar</label><br>
+                    <input type="checkbox" name="pants" id="pants">
+                    <label for="pants">Byxor</label><br>
+                    <input type="checkbox" name="shoes" id="shoes">
+                    <label for="shoes">Skor</label>
+                </fieldset>
+                <input type="submit" value="Lägg till">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
